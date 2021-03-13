@@ -22,8 +22,10 @@ count = 0
 condition = True
 while condition:
     guess = int(input("Guess the number: "))
-    if guess > num:
-        print("Your guess was too big! Please try again")
+    if guess < 0 or guess > 100:
+        print(f"The {guess} you entered is invalid")
+        
+    elif guess > num:
         count = count + 1
     elif guess < num:
         print("Your guess was too low! Please try again")    
